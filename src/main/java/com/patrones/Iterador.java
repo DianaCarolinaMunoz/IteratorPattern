@@ -1,6 +1,6 @@
 package com.patrones;
 
 public interface Iterador {
-	public Object siguiente();
-    public boolean tienesSiguiente();
+	Object siguiente();
+    Boolean tieneSiguiente();
 }

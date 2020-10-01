@@ -2,17 +2,24 @@ package com.patrones;
 
 public class IteradorConcreto implements Iterador {
 	
-	private SistemaEconomico sistemaEconomico;
-	private boolean estadoIterador;
+	private Persona[] listaPersonas;
+	private boolean estadoIterador; //No se para que se usa
+	private int posicion = 0;
 
-	public Object siguiente() {
-		// TODO Auto-generated method stub
-		return null;
+	public IteradorConcreto(Persona[] listaPersonas) {
+		super();
+		this.listaPersonas = listaPersonas;
 	}
 
-	public boolean tienesSiguiente() {
-		// TODO Auto-generated method stub
-		return false;
+	public Object siguiente() {
+		Persona persona =  listaPersonas[posicion]; 
+		posicion += 1; 
+        return persona; 
+	}
+
+	public Boolean tieneSiguiente() {
+		return !(posicion >= listaPersonas.length || 
+				listaPersonas[posicion] == null);
 	}
 
 }

@@ -6,12 +6,21 @@ public class Persona extends EnteEconomico {
 
 	public Persona(String name, float patrimonio) {
 		super(name, patrimonio);
-		// TODO Auto-generated constructor stub
 	}
 	
 	
 	public void renunciar(){
 
     }
+
+
+	public String getName() {
+		return name;
+	}
+
+
+	public void setName(String name) {
+		this.name = name;
+	}
 
 }
