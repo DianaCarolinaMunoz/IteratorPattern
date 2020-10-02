@@ -1,28 +1,28 @@
 package com.patrones;
 
 public class IteradorConcreto implements Iterador {
-	
-	private SistemaEconomico[] listaSistemasE;
+
+	private EnteEconomico[] listaEnteEconomicos;
 	private int posicion = 0;
 
-	public IteradorConcreto(SistemaEconomico[] listaSistemasE) {
+	public IteradorConcreto(EnteEconomico[] listaEnteEconomicos) {
 		super();
-		this.listaSistemasE = listaSistemasE;
+		this.listaEnteEconomicos = listaEnteEconomicos;
 	}
 
 	public Boolean tieneSiguiente() {
-		if (posicion >= listaSistemasE.length || 
-				listaSistemasE[posicion] == null)
+		if (posicion >= listaEnteEconomicos.length || listaEnteEconomicos[posicion] == null) {
 			return false;
-		else
+		} else {
 			return true;
-		
+		}
+
 	}
-	
+
 	public Object siguiente() {
-		SistemaEconomico sistemaEconomico =  listaSistemasE[posicion]; 
-		posicion += 1; 
-        return sistemaEconomico; 
-	}	
+		EnteEconomico sistemaEconomico = listaEnteEconomicos[posicion];
+		posicion += 1;
+		return sistemaEconomico;
+	}
 
 }

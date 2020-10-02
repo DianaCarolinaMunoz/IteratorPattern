@@ -1,21 +1,12 @@
 package com.patrones;
 
-public class Empresa {
-	
-	private String nit;
+public class Empresa extends EnteEconomico {
+
 	private String razonSocial;
 
-	public Empresa(String nit, String razonSocial) {
-		this.nit = nit;
+	public Empresa(Empresa empresa, int identificador, float patrimonio, String razonSocial) {
+		super(empresa, identificador, patrimonio);
 		this.razonSocial = razonSocial;
-	}
-
-	public String getNit() {
-		return nit;
-	}
-
-	public void setNit(String nit) {
-		this.nit = nit;
 	}
 
 	public String getRazonSocial() {
@@ -26,5 +17,4 @@ public class Empresa {
 		this.razonSocial = razonSocial;
 	}
 
-	
 }

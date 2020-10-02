@@ -1,38 +1,34 @@
 package com.patrones;
 
-public class Persona {
-	private String name;
-	private float patrimonio;
-	
+public class Persona extends EnteEconomico {
 
-	public Persona(String name, float patrimonio) {
-		this.name = name;
-		this.patrimonio = patrimonio;
-	}
-	
-	
-	public void renunciar(){
+	private String nombre;
 
-    }
-
-
-	public String getName() {
-		return name;
+	public Persona(EnteEconomico empresa, int identificador, float patrimonio, String nombre) {
+		super(empresa, identificador, patrimonio);
+		this.nombre = nombre;
 	}
 
+	public void renunciar() {
 
-	public void setName(String name) {
-		this.name = name;
 	}
 
+	@Override
+	public int getIdentificador() {
+		return super.getIdentificador();
+	}
 
+	@Override
 	public float getPatrimonio() {
-		return patrimonio;
+		return super.getPatrimonio();
 	}
 
+	public String getNombre() {
+		return nombre;
+	}
 
-	public void setPatrimonio(float patrimonio) {
-		this.patrimonio = patrimonio;
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
 	}
 
 }
