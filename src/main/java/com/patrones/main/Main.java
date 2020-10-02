@@ -10,6 +10,6 @@ public class Main {
     { 
         ColeccionIterable se = new SistemaEconomico(); 
         Simulador simulador = new Simulador(se); 
-        simulador.printNotifications(); 
+        simulador.print(); 
     }
 }

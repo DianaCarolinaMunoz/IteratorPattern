@@ -2,18 +2,17 @@ package com.patrones;
 
 public class IteradorConcreto implements Iterador {
 	
-	private Persona[] listaPersonas;
-	private boolean estadoIterador; //No se para que se usa
+	private SistemaEconomico[] listaSistemasE;
 	private int posicion = 0;
 
-	public IteradorConcreto(Persona[] listaPersonas) {
+	public IteradorConcreto(SistemaEconomico[] listaSistemasE) {
 		super();
-		this.listaPersonas = listaPersonas;
+		this.listaSistemasE = listaSistemasE;
 	}
 
 	public Boolean tieneSiguiente() {
-		if (posicion >= listaPersonas.length || 
-				listaPersonas[posicion] == null)
+		if (posicion >= listaSistemasE.length || 
+				listaSistemasE[posicion] == null)
 			return false;
 		else
 			return true;
@@ -21,9 +20,9 @@ public class IteradorConcreto implements Iterador {
 	}
 	
 	public Object siguiente() {
-		Persona persona =  listaPersonas[posicion]; 
+		SistemaEconomico sistemaEconomico =  listaSistemasE[posicion]; 
 		posicion += 1; 
-        return persona; 
+        return sistemaEconomico; 
 	}	
 
 }

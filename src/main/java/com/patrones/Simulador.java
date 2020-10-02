@@ -8,14 +8,14 @@ public class Simulador {
         this.sistemaEconomico = sistemaEconomico; 
     } 
   
-    public void printNotifications() 
+    public void print() 
     { 
         Iterador iterador = this.sistemaEconomico.crearIterador(); 
         System.out.println("-------SIMULADOR------------"); 
         while (iterador.tieneSiguiente()) 
         { 
-            Persona p = (Persona)iterador.siguiente(); 
-            System.out.println(p.getName()); 
+            SistemaEconomico se = (SistemaEconomico)iterador.siguiente(); 
+            System.out.println("Persona: " + se.getPersona().getName() + " | " + "Empresa: " + se.getEmpresa().getNit()); 
         } 
     } 
 }

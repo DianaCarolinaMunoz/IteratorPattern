@@ -12,17 +12,14 @@ public class EnteEconomico implements Contract {
 	}
 
 	public void contratar(Object ente, int costo, int tiempo) {
-		// TODO Auto-generated method stub
 		
 	}
 
 	public void disolver(Object ente, int penalizacion) {
-		// TODO Auto-generated method stub
 		
 	}
 
 	public void pagar(Object ente) {
-		// TODO Auto-generated method stub
 		
 	}
 

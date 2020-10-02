@@ -25,4 +25,14 @@ public class Persona {
 		this.name = name;
 	}
 
+
+	public float getPatrimonio() {
+		return patrimonio;
+	}
+
+
+	public void setPatrimonio(float patrimonio) {
+		this.patrimonio = patrimonio;
+	}
+
 }
