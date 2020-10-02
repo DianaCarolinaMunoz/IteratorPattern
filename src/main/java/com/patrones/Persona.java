@@ -1,11 +1,13 @@
 package com.patrones;
 
-public class Persona extends EnteEconomico {
+public class Persona {
 	private String name;
+	private float patrimonio;
 	
 
 	public Persona(String name, float patrimonio) {
-		super(name, patrimonio);
+		this.name = name;
+		this.patrimonio = patrimonio;
 	}
 	
 	

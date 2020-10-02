@@ -1,9 +1,9 @@
 package com.patrones;
 
 public class Simulador {
-	SistemaEconomico sistemaEconomico; 
+	private ColeccionIterable sistemaEconomico; 
 	  
-    public Simulador(SistemaEconomico sistemaEconomico) 
+    public Simulador(ColeccionIterable sistemaEconomico) 
     { 
         this.sistemaEconomico = sistemaEconomico; 
     } 
